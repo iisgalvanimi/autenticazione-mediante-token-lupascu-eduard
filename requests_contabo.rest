@@ -1,0 +1,53 @@
+
+### login
+
+POST http://161.97.114.50:4000/login
+Content-Type: application/json
+
+{
+  "username": "Jim"
+}
+
+
+### Richiesta al server (con token non corretto)
+GET http://161.97.114.50:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjE0NzkyMzMxLCJleHAiOjE2MTQ3OTM4MzF9.aw6rMeTtI5yiHAZcaOaUcrJtIVD64j9MsEqJLD4HKGw
+
+
+
+
+
+### Richiesta al server (con token non corretto)
+GET http://161.97.114.50:3000/posts
+Authorization: Bearer non_corretto
+
+
+### Richiesta al server (con token scaduto)
+GET http://161.97.114.50:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjE0NzkxMzUzLCJleHAiOjE2MTQ3OTEzNzN9.yChDvuMPfyfRVkouOFI1VD4GJTlshxko8v8ZF_r6pbw
+
+
+###
+
+POST http://161.97.114.50:4000/renew_access_token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjE0NzkyMTAyfQ.FZkhrzlp8Q1_tlJthaLBnFfUsk0pAL4UhkHSWLbZUhk"
+}
+
+
+### operazione di logout
+
+DELETE http://161.97.114.50:4000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjE0NzkzMTk2fQ.G7YqKmkz_rfzxOLzjozvFY84KDgempVwotE33dMTZBY"
+}
+
+
+### list token
+
+GET http://161.97.114.50:4000/list_tokens
+Content-Type: application/json

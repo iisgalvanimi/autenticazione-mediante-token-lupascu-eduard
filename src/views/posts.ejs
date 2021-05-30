@@ -1,0 +1,7 @@
+<h1>Posts di <%= credentials.username %></h1>
+<ul><% for (i in posts){ %>
+<%var x = posts[i]%>
+<li><%= x.username %> :
+<%= x.title %></li>
+<%}%>
+</ul>

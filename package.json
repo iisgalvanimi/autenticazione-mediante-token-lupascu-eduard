@@ -1,0 +1,33 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "docker network create jwt_net",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "node src/app/server.js",
+    "devStartAuth": "node src/app/authServer.js",
+    "devClient": "node src/app/client_demo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "filippoformaio",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.1.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iisgalvanimi/autenticazione-mediante-token-filippoformaio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iisgalvanimi/autenticazione-mediante-token-filippoformaio/issues"
+  },
+  "homepage": "https://github.com/iisgalvanimi/autenticazione-mediante-token-filippoformaio#readme"
+}
